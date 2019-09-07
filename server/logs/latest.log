@@ -4879,3 +4879,4 @@ Caused by: java.lang.IllegalArgumentException: Particle FALLING_DUST requires da
 [22:25:33] [Server thread/INFO]: philip2096 issued server command: /trail set campfire_signal_smoke
 [22:25:52] [Server thread/INFO]: philip2096 issued server command: /trail set campfire_cosy_smoke
 [22:26:16] [Server thread/INFO]: philip2096 issued server command: /trail set campfire_cosy_smoke
+[22:49:24] [Thread-1/INFO]: Stopping server
