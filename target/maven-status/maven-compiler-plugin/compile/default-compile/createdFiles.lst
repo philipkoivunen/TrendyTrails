@@ -1,0 +1,6 @@
+com\github\philipkoivunen\trendytrails\constants\TrailConstants.class
+com\github\philipkoivunen\trendytrails\message\MessageHandler.class
+com\github\philipkoivunen\trendytrails\TrailSummoner.class
+com\github\philipkoivunen\trendytrails\commandhandlers\TrailSetHandler.class
+com\github\philipkoivunen\trendytrails\FoxSummoner.class
+com\github\philipkoivunen\trendytrails\Trails.class
