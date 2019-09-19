@@ -1,6 +1,9 @@
+com\github\philipkoivunen\trendytrails\commandhandlers\ColorHandler.class
+com\github\philipkoivunen\trendytrails\messages\MessageHandler.class
+com\github\philipkoivunen\trendytrails\commandhandlers\TrailHandler.class
 com\github\philipkoivunen\trendytrails\constants\TrailConstants.class
-com\github\philipkoivunen\trendytrails\message\MessageHandler.class
+com\github\philipkoivunen\trendytrails\helpers\TrailHelper.class
+com\github\philipkoivunen\trendytrails\constants\ColorConstants.class
+com\github\philipkoivunen\trendytrails\helpers\ColorHelper.class
 com\github\philipkoivunen\trendytrails\TrailSummoner.class
-com\github\philipkoivunen\trendytrails\commandhandlers\TrailSetHandler.class
-com\github\philipkoivunen\trendytrails\FoxSummoner.class
 com\github\philipkoivunen\trendytrails\Trails.class

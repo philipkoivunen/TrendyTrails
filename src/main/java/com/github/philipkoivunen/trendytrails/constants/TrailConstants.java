@@ -1,7 +1,6 @@
 package com.github.philipkoivunen.trendytrails.constants;
 
 public enum TrailConstants {
-        BLOCK_DUST,
         BUBBLE_POP,
         CAMPFIRE_COSY_SMOKE,
         COMPOSTER,

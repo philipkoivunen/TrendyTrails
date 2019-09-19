@@ -3,11 +3,14 @@ version: 0.1.0
 author: philip2096
 description: testing to create a plugin
 main: com.github.philipkoivunen.trendytrails.Trails
-api-version: 1.13
+depend: [ProtocolLib]
 commands:
   trail:
     aliases:
       - trail
-  fox:
-    aliases:
-      - foxy
+permissions:
+  trendytrails.trail:
+    default: false
+  trendytrails.trail.set:
+    default: false
+api-version: 1.13
