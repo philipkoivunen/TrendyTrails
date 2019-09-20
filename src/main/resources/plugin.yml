@@ -17,5 +17,7 @@ permissions:
     default: false
   trendytrails.trail.set:
     default: false
+  trendytrails.trail.clear:
+    default: false
   trendytrails.trendytrails.reload:
     default: false

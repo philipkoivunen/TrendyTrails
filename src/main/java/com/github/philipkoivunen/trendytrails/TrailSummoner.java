@@ -1,5 +1,6 @@
 package com.github.philipkoivunen.trendytrails;
 
+import com.comphenix.protocol.PacketType;
 import com.github.hornta.carbon.ICommandHandler;
 import com.github.hornta.carbon.message.MessageManager;
 import com.github.philipkoivunen.trendytrails.constants.MessageConstants;
@@ -12,20 +13,19 @@ import org.bukkit.entity.Player;
 import org.bukkit.event.EventHandler;
 import org.bukkit.event.Listener;
 import org.bukkit.event.player.PlayerMoveEvent;
-import org.bukkit.plugin.Plugin;
 
-public class TrailSummoner implements ICommandHandler, Listener {
-    private final Plugin plugin;
+public class TrailSummoner implements Listener {
     private Particle particle;
     private Player player;
     private Boolean isActive = false;
     private Boolean useDust = false;
     private String currentColor;
 
-    //TODO: move carbon code out to a new class and make the trailsummoner class more general so it can be used by other commandhandlers.
-    public TrailSummoner(Plugin plugin) {
-        this.plugin = plugin;
-    }
+    public void setParticle(String particle) { this.particle = Particle.valueOf(particle.toUpperCase()); }
+    public void setPlayer(Player player) { this.player = player;}
+    public void setColor(String color) { this.currentColor = color;}
+    public void setIsActive(Boolean isActive) {this.isActive = isActive;}
+    public void setUseDust(Boolean useDust) {this.useDust = useDust;}
 
     @EventHandler
     void onPlayerMove(PlayerMoveEvent event) {
@@ -35,33 +35,5 @@ public class TrailSummoner implements ICommandHandler, Listener {
             this.player.spawnParticle(this.particle, this.player.getLocation().getX(), this.player.getLocation().getY() + 0.5, this.player.getLocation().getZ(), 0, new Particle.DustOptions(Color.fromRGB(colors[0], colors[1], colors[2]), 2));
         }
         else this.player.spawnParticle(this.particle, this.player.getLocation().getX(), this.player.getLocation().getY() + 0.5, this.player.getLocation().getZ(), 0);
-    }
-
-    @Override
-    public void handle(CommandSender commandSender, String[] args, int i) {
-        if(this.particle == null || !args[0].toUpperCase().equals(this.particle.name())) {
-            if(args[0].toUpperCase().equals(TrailConstants.REDSTONE.name()) && args[1] != null) {
-                this.currentColor = args[1].toUpperCase();
-                this.isActive = true;
-                this.particle = Particle.valueOf(args[0].toUpperCase());
-                this.useDust = true;
-
-                MessageManager.sendMessage(this.player, MessageConstants.EFFECT_HANDLE_FAILED);
-            } else {
-                this.particle = Particle.valueOf(args[0].toUpperCase());
-                this.isActive = true;
-                this.useDust = false;
-            }
-        } else if(args[0].toUpperCase().equals(TrailConstants.REDSTONE.name()) && args[1] != null && args[1].toUpperCase() != currentColor) {
-            this.currentColor = args[1].toUpperCase();
-            this.useDust = true;
-            MessageManager.sendMessage(this.player, MessageConstants.EFFECT_SET_SUCCESS);
-        } else{
-            this.isActive = false;
-            this.useDust = false;
-
-            MessageManager.sendMessage(this.player, MessageConstants.EFFECT_REMOVED_SUCCESS);
-        }
-        this.player =  (Player) commandSender;
     }
 }

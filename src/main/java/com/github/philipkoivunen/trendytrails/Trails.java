@@ -28,7 +28,6 @@ public class Trails extends JavaPlugin {
     private MessageManager messageManager;
     private Configuration configuration;
     private Translations translations;
-
     @Override
     public void onEnable() {
         protocolManager = ProtocolLibrary.getProtocolManager();
@@ -66,11 +65,11 @@ public class Trails extends JavaPlugin {
             MessageManager.sendMessage(sender, MessageConstants.NO_PERMISSION);
         });
 
-        TrailSummoner trailSummoner = new TrailSummoner(this);
+        TrailSummoner trailSummoner = new TrailSummoner();
         Bukkit.getPluginManager().registerEvents(trailSummoner, this);
 
         carbon.addCommand("trail set")
-                .withHandler(trailSummoner)
+                .withHandler(new TrailSet(trailSummoner))
                 .withArgument(
                         new CarbonArgument.Builder("effect")
                                 .setHandler(new TrailHandler())
@@ -79,6 +78,11 @@ public class Trails extends JavaPlugin {
                 .withArgument(new CarbonArgument.Builder("color").setDefaultValue(CommandSender.class, ColorConstants.WHITE.name()).setHandler(new ColorHandler()).create())
                 .requiresPermission("trendytrails.trail.set.[0]")
                 .preventConsoleCommandSender();
+
+        carbon
+                .addCommand("trail clear")
+                .withHandler(new TrailClear(trailSummoner))
+                .requiresPermission("trendytrails.trail.clear");
 
         carbon
                 .addCommand("trendytrails reload")

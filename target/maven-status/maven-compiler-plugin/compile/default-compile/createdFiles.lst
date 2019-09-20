@@ -4,8 +4,10 @@ com\github\philipkoivunen\trendytrails\helpers\ColorHelper.class
 com\github\philipkoivunen\trendytrails\TrailSummoner.class
 com\github\philipkoivunen\trendytrails\TrailsReload.class
 com\github\philipkoivunen\trendytrails\constants\MessageConstants.class
+com\github\philipkoivunen\trendytrails\TrailClear.class
 com\github\philipkoivunen\trendytrails\commandhandlers\TrailHandler.class
 com\github\philipkoivunen\trendytrails\helpers\TrailHelper.class
 com\github\philipkoivunen\trendytrails\constants\ColorConstants.class
+com\github\philipkoivunen\trendytrails\TrailSet.class
 com\github\philipkoivunen\trendytrails\constants\ConfigConstants.class
 com\github\philipkoivunen\trendytrails\Trails.class
