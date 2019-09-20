@@ -4,13 +4,18 @@ author: philip2096
 description: testing to create a plugin
 main: com.github.philipkoivunen.trendytrails.Trails
 depend: [ProtocolLib]
+api-version: 1.13
 commands:
   trail:
     aliases:
       - trail
+  trendytrails:
+    aliases:
+      - trails
 permissions:
   trendytrails.trail:
     default: false
   trendytrails.trail.set:
     default: false
-api-version: 1.13
+  trendytrails.trendytrails.reload:
+    default: false

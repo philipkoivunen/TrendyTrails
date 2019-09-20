@@ -1,9 +1,10 @@
 package com.github.philipkoivunen.trendytrails;
 
 import com.github.hornta.carbon.ICommandHandler;
+import com.github.hornta.carbon.message.MessageManager;
+import com.github.philipkoivunen.trendytrails.constants.MessageConstants;
 import com.github.philipkoivunen.trendytrails.constants.TrailConstants;
 import com.github.philipkoivunen.trendytrails.helpers.ColorHelper;
-import com.github.philipkoivunen.trendytrails.messages.MessageHandler;
 import org.bukkit.Color;
 import org.bukkit.Particle;
 import org.bukkit.command.CommandSender;
@@ -40,11 +41,12 @@ public class TrailSummoner implements ICommandHandler, Listener {
     public void handle(CommandSender commandSender, String[] args, int i) {
         if(this.particle == null || !args[0].toUpperCase().equals(this.particle.name())) {
             if(args[0].toUpperCase().equals(TrailConstants.REDSTONE.name()) && args[1] != null) {
-                    this.currentColor = args[1].toUpperCase();
-                    this.isActive = true;
-                    this.particle = Particle.valueOf(args[0].toUpperCase());
-                    this.useDust = true;
-                MessageHandler.sendMessage(this.player, "Nu är din trail satt", false);
+                this.currentColor = args[1].toUpperCase();
+                this.isActive = true;
+                this.particle = Particle.valueOf(args[0].toUpperCase());
+                this.useDust = true;
+
+                MessageManager.sendMessage(this.player, MessageConstants.EFFECT_HANDLE_FAILED);
             } else {
                 this.particle = Particle.valueOf(args[0].toUpperCase());
                 this.isActive = true;
@@ -53,12 +55,12 @@ public class TrailSummoner implements ICommandHandler, Listener {
         } else if(args[0].toUpperCase().equals(TrailConstants.REDSTONE.name()) && args[1] != null && args[1].toUpperCase() != currentColor) {
             this.currentColor = args[1].toUpperCase();
             this.useDust = true;
-            MessageHandler.sendMessage(this.player, "Nu är din trail satt", false);
+            MessageManager.sendMessage(this.player, MessageConstants.EFFECT_SET_SUCCESS);
         } else{
             this.isActive = false;
             this.useDust = false;
 
-            MessageHandler.sendMessage(this.player, "Nu är din trail borttagen", false);
+            MessageManager.sendMessage(this.player, MessageConstants.EFFECT_REMOVED_SUCCESS);
         }
         this.player =  (Player) commandSender;
     }

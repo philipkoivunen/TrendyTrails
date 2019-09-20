@@ -9,8 +9,13 @@ commands:
   trail:
     aliases:
       - trail
+  trendytrails:
+    aliases:
+      - trails
 permissions:
   trendytrails.trail:
     default: false
   trendytrails.trail.set:
+    default: false
+  trendytrails.trendytrails.reload:
     default: false

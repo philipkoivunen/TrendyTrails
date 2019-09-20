@@ -2,8 +2,9 @@ package com.github.philipkoivunen.trendytrails.commandhandlers;
 
 import com.github.hornta.carbon.ValidationResult;
 import com.github.hornta.carbon.completers.IArgumentHandler;
+import com.github.hornta.carbon.message.MessageManager;
+import com.github.philipkoivunen.trendytrails.constants.MessageConstants;
 import com.github.philipkoivunen.trendytrails.constants.TrailConstants;
-import com.github.philipkoivunen.trendytrails.messages.MessageHandler;
 import org.bukkit.command.CommandSender;
 
 import java.util.Arrays;
@@ -27,6 +28,6 @@ public class TrailHandler implements IArgumentHandler {
 
     @Override
     public void whenInvalid(ValidationResult result) {
-        MessageHandler.sendMessage(result.getCommandSender(), "Det gick fel när färg skulle sättas", true);
+        MessageManager.sendMessage(result.getCommandSender(), MessageConstants.EFFECT_HANDLE_FAILED);
     }
 }
