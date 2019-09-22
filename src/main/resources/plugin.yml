@@ -1,7 +1,7 @@
 name: TrendyTrails
 version: ${project.version}
 author: philip2096
-description: testing to create a plugin
+description: A simple to use cosmetic plugin
 main: com.github.philipkoivunen.trendytrails.Trails
 depend: [ProtocolLib]
 api-version: 1.13
@@ -9,9 +9,6 @@ commands:
   trail:
     aliases:
       - trail
-  trendytrails:
-    aliases:
-      - trails
 permissions:
   trendytrails.trail:
     default: false
@@ -19,5 +16,5 @@ permissions:
     default: false
   trendytrails.trail.clear:
     default: false
-  trendytrails.trendytrails.reload:
+  trendytrails.trail.reload:
     default: false

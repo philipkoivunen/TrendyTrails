@@ -3,13 +3,14 @@ Trendytrails is a simple to use, configless trail plugin for spigot.
 
 ## why
 I made trendytrails to supply the server admins with an easy to use plugin without any complex GUI:s and configs.  
-You, as the server admin have full control over wich trails users or permission groups should have access to via Trendytrails permissions
+You, as the server admin have full control over which trails users or permission groups should have access to via 
+permissions.
 
 ## Permissions
 * trendytrails.trail.set.* - To permit usage of each traileffect
 * trendytrails.trail.set.[EFFECTNAME] 
 * trendytrails.trail.clear
-* trendytrails.reload 
+* trendytrails.trail.reload 
 
 ## usage
 * /trail set [effectName] [colorName] - Colorname is optional and the command supports autocomplete

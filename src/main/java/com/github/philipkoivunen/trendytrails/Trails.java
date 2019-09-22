@@ -14,10 +14,16 @@ import com.github.philipkoivunen.trendytrails.commandhandlers.TrailHandler;
 import com.github.philipkoivunen.trendytrails.constants.ColorConstants;
 import com.github.philipkoivunen.trendytrails.constants.ConfigConstants;
 import com.github.philipkoivunen.trendytrails.constants.MessageConstants;
+import com.github.philipkoivunen.trendytrails.helpers.ColorHelper;
 import com.github.philipkoivunen.trendytrails.objects.PlayerTrailsHolder;
 import org.bukkit.Bukkit;
+import org.bukkit.Color;
+import org.bukkit.Particle;
 import org.bukkit.command.Command;
 import org.bukkit.command.CommandSender;
+import org.bukkit.event.EventHandler;
+import org.bukkit.event.Listener;
+import org.bukkit.event.player.PlayerMoveEvent;
 import org.bukkit.plugin.java.JavaPlugin;
 import java.util.List;
 import java.util.logging.Level;
@@ -30,6 +36,7 @@ public class Trails extends JavaPlugin {
     private Configuration configuration;
     private Translations translations;
     private PlayerTrailsHolder playerTrailsHolder;
+    private Listener listener;
     @Override
     public void onEnable() {
         protocolManager = ProtocolLibrary.getProtocolManager();
@@ -69,6 +76,8 @@ public class Trails extends JavaPlugin {
             MessageManager.sendMessage(sender, MessageConstants.NO_PERMISSION);
         });
 
+        Bukkit.getPluginManager().registerEvents(new EventListener(playerTrailsHolder), this);
+
         carbon.addCommand("trail set")
                 .withHandler(new TrailSet(playerTrailsHolder))
                 .withArgument(
@@ -86,9 +95,9 @@ public class Trails extends JavaPlugin {
                 .requiresPermission("trendytrails.trail.clear");
 
         carbon
-                .addCommand("trendytrails reload")
+                .addCommand("trail reload")
                 .withHandler(new TrailsReload())
-                .requiresPermission("trendytrails.reload");
+                .requiresPermission("trendytrails.trail.reload");
     }
 
     @Override
@@ -111,6 +120,10 @@ public class Trails extends JavaPlugin {
 
     public Translations getTranslations() {
         return translations;
+    }
+
+    public PlayerTrailsHolder getPlayerTrailsHolder() {
+        return playerTrailsHolder;
     }
 
 }

@@ -15,7 +15,13 @@ public class TrailClear implements ICommandHandler {
     }
     @Override
     public void handle(CommandSender commandSender, String[] strings, int i) {
-        this.playerTrailsHolder.removeTrail((Player) commandSender);
-        MessageManager.sendMessage(commandSender, MessageConstants.EFFECT_REMOVED_SUCCESS);
+        TrailSummoner currentTrail = this.playerTrailsHolder.getTrail((Player) commandSender);
+        if(currentTrail == null) {
+            MessageManager.sendMessage(commandSender, MessageConstants.NO_ACTIVE_TRAIL);
+        }
+        else{
+            this.playerTrailsHolder.removeTrail((Player) commandSender);
+            MessageManager.sendMessage(commandSender, MessageConstants.EFFECT_REMOVED_SUCCESS);
+        }
     }
 }

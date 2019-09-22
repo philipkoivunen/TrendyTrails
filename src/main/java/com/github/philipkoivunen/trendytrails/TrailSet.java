@@ -31,7 +31,6 @@ public class TrailSet implements ICommandHandler {
             currentTrail.setIsActive(true);
             currentTrail.setUseDust(false);
         }
-        Bukkit.getPluginManager().registerEvents(currentTrail, Trails.getInstance());
         MessageManager.sendMessage(commandSender, MessageConstants.EFFECT_SET_SUCCESS);
     }
 }
