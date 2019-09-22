@@ -1,5 +1,6 @@
 com\github\philipkoivunen\trendytrails\commandhandlers\ColorHandler.class
 com\github\philipkoivunen\trendytrails\constants\TrailConstants.class
+com\github\philipkoivunen\trendytrails\objects\PlayerTrailsHolder.class
 com\github\philipkoivunen\trendytrails\helpers\ColorHelper.class
 com\github\philipkoivunen\trendytrails\TrailSummoner.class
 com\github\philipkoivunen\trendytrails\TrailsReload.class

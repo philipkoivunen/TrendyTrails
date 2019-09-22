@@ -14,6 +14,7 @@ import com.github.philipkoivunen.trendytrails.commandhandlers.TrailHandler;
 import com.github.philipkoivunen.trendytrails.constants.ColorConstants;
 import com.github.philipkoivunen.trendytrails.constants.ConfigConstants;
 import com.github.philipkoivunen.trendytrails.constants.MessageConstants;
+import com.github.philipkoivunen.trendytrails.objects.PlayerTrailsHolder;
 import org.bukkit.Bukkit;
 import org.bukkit.command.Command;
 import org.bukkit.command.CommandSender;
@@ -28,10 +29,12 @@ public class Trails extends JavaPlugin {
     private MessageManager messageManager;
     private Configuration configuration;
     private Translations translations;
+    private PlayerTrailsHolder playerTrailsHolder;
     @Override
     public void onEnable() {
         protocolManager = ProtocolLibrary.getProtocolManager();
         carbon = new Carbon();
+        this.instance = this;
 
         try {
             configuration = new ConfigurationBuilder(this)
@@ -60,16 +63,14 @@ public class Trails extends JavaPlugin {
         Translation fallbackTranslation = translations.createTranslation("english");
         messageManager.setTranslation(translation, fallbackTranslation);
 
+        playerTrailsHolder = new PlayerTrailsHolder();
 
         carbon.setNoPermissionHandler((CommandSender sender, CarbonCommand command) -> {
             MessageManager.sendMessage(sender, MessageConstants.NO_PERMISSION);
         });
 
-        TrailSummoner trailSummoner = new TrailSummoner();
-        Bukkit.getPluginManager().registerEvents(trailSummoner, this);
-
         carbon.addCommand("trail set")
-                .withHandler(new TrailSet(trailSummoner))
+                .withHandler(new TrailSet(playerTrailsHolder))
                 .withArgument(
                         new CarbonArgument.Builder("effect")
                                 .setHandler(new TrailHandler())
@@ -81,7 +82,7 @@ public class Trails extends JavaPlugin {
 
         carbon
                 .addCommand("trail clear")
-                .withHandler(new TrailClear(trailSummoner))
+                .withHandler(new TrailClear(playerTrailsHolder))
                 .requiresPermission("trendytrails.trail.clear");
 
         carbon
