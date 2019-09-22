@@ -12,9 +12,9 @@ You, as the server admin have full control over wich trails users or permission 
 * trendytrails.reload 
 
 ## usage
-/trail set [effectName] [colorName] - Colorname is optional and the command supports autocomplete
-/trail clear - clears active effect
-/trail reload - reload config files
+* /trail set [effectName] [colorName] - Colorname is optional and the command supports autocomplete
+* /trail clear - clears active effect
+* /trail reload - reload config files
         
 ## Effects
 * bubble_pop
