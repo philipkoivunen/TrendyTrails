@@ -23,12 +23,11 @@ public class EventListener implements Listener {
 
     @EventHandler
     void onPlayerMove(PlayerMoveEvent event) throws InvocationTargetException {
-        WrapperPlayServerWorldParticles wpswp = new WrapperPlayServerWorldParticles();
-        wpswp.setNumberOfParticles(1);
-        wpswp.setLongDistance(true);
-
         TrailSummoner currentTrail = this.playerTrailsHolder.getTrail(event.getPlayer());
         if(currentTrail != null) {
+            WrapperPlayServerWorldParticles wpswp = new WrapperPlayServerWorldParticles();
+            wpswp.setNumberOfParticles(1);
+            wpswp.setLongDistance(true);
             Location playerLocation = event.getPlayer().getLocation();
             if(!currentTrail.isActive) return;
 
