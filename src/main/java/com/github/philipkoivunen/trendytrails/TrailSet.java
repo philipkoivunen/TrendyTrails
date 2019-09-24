@@ -5,7 +5,6 @@ import com.github.hornta.carbon.message.MessageManager;
 import com.github.philipkoivunen.trendytrails.constants.MessageConstants;
 import com.github.philipkoivunen.trendytrails.constants.TrailConstants;
 import com.github.philipkoivunen.trendytrails.objects.PlayerTrailsHolder;
-import org.bukkit.Bukkit;
 import org.bukkit.command.CommandSender;
 import org.bukkit.entity.Player;
 

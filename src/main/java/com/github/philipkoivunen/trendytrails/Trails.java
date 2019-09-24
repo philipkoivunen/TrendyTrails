@@ -63,6 +63,7 @@ public class Trails extends JavaPlugin {
                 .add(MessageConstants.MISSING_ARGUMENT, "missing_argument")
                 .add(MessageConstants.CONFIGURATION_RELOADED, "configuration_reloaded")
                 .add(MessageConstants.CONFIGURATION_RELOAD_FAILED, "configuration_reload_failed")
+                .add(MessageConstants.NO_ACTIVE_TRAIL, "no_active_trail")
                 .build();
 
         translations = new Translations(this, messageManager);
@@ -121,9 +122,7 @@ public class Trails extends JavaPlugin {
     public Translations getTranslations() {
         return translations;
     }
-
-    public PlayerTrailsHolder getPlayerTrailsHolder() {
-        return playerTrailsHolder;
+    public ProtocolManager getProtocolManager() {
+        return protocolManager;
     }
-
 }

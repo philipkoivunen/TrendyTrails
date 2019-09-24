@@ -15,9 +15,9 @@ public class TrailsReload implements ICommandHandler {
         MessageManager.sendMessage(commandSender, MessageConstants.CONFIGURATION_RELOAD_FAILED);
         return;
     }
-    Translation translation = Trails.getInstance().getTranslations().createTranslation(Trails.getInstance().getConfiguration().get(ConfigConstants.LANGUAGE));
-    MessageManager.getInstance().setPrimaryTranslation(translation);
-    MessageManager.sendMessage(commandSender, MessageConstants.CONFIGURATION_RELOADED);
-}
+        Translation translation = Trails.getInstance().getTranslations().createTranslation(Trails.getInstance().getConfiguration().get(ConfigConstants.LANGUAGE));
+        MessageManager.getInstance().setPrimaryTranslation(translation);
+        MessageManager.sendMessage(commandSender, MessageConstants.CONFIGURATION_RELOADED);
+    }
 
 }
