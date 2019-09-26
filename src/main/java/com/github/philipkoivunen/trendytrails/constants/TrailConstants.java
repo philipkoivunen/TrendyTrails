@@ -18,7 +18,6 @@ public enum TrailConstants {
         FLAME,
         HEART,
         LANDING_LAVA,
-        LANDING_WATER,
         LAVA,
         NAUTILUS,
         NOTE,

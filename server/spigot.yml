@@ -59,6 +59,7 @@ stats:
   forced-stats: {}
 world-settings:
   default:
+    max-entity-collisions: 8
     verbose: true
     view-distance: default
     nerf-spawner-mobs: false
