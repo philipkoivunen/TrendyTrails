@@ -23,6 +23,12 @@
     },
     "done": true
   },
+  "minecraft:recipes/combat/iron_sword": {
+    "criteria": {
+      "has_iron_ingot": "2020-01-11 21:06:42 +0100"
+    },
+    "done": true
+  },
   "minecraft:recipes/building_blocks/stone_bricks": {
     "criteria": {
       "has_stone": "2019-09-26 18:40:50 +0200"
@@ -44,6 +50,12 @@
   "minecraft:recipes/building_blocks/lime_concrete_powder": {
     "criteria": {
       "has_gravel": "2019-09-26 18:41:32 +0200"
+    },
+    "done": true
+  },
+  "minecraft:recipes/tools/iron_pickaxe": {
+    "criteria": {
+      "has_iron_ingot": "2020-01-11 21:06:42 +0100"
     },
     "done": true
   },
@@ -95,6 +107,12 @@
     },
     "done": true
   },
+  "minecraft:recipes/misc/iron_nugget": {
+    "criteria": {
+      "has_iron_ingot": "2020-01-11 21:06:42 +0100"
+    },
+    "done": true
+  },
   "minecraft:recipes/decorations/chest": {
     "criteria": {
       "has_lots_of_items": "2019-09-26 18:38:40 +0200"
@@ -107,15 +125,15 @@
     },
     "done": true
   },
-  "minecraft:recipes/building_blocks/brown_concrete_powder": {
-    "criteria": {
-      "has_gravel": "2019-09-26 18:41:32 +0200"
-    },
-    "done": true
-  },
   "minecraft:recipes/building_blocks/stone_slab_from_stone_stonecutting": {
     "criteria": {
       "has_stone": "2019-09-26 18:40:50 +0200"
+    },
+    "done": true
+  },
+  "minecraft:recipes/building_blocks/brown_concrete_powder": {
+    "criteria": {
+      "has_gravel": "2019-09-26 18:41:32 +0200"
     },
     "done": true
   },
@@ -125,15 +143,21 @@
     },
     "done": true
   },
-  "minecraft:recipes/building_blocks/stone_slab": {
+  "minecraft:recipes/building_blocks/iron_block": {
     "criteria": {
-      "has_stone": "2019-09-26 18:40:50 +0200"
+      "has_iron_ingot": "2020-01-11 21:06:42 +0100"
     },
     "done": true
   },
-  "minecraft:recipes/combat/arrow": {
+  "minecraft:recipes/tools/shears": {
     "criteria": {
-      "has_flint": "2019-09-26 18:41:32 +0200"
+      "has_iron_ingot": "2020-01-11 21:06:42 +0100"
+    },
+    "done": true
+  },
+  "minecraft:recipes/building_blocks/stone_slab": {
+    "criteria": {
+      "has_stone": "2019-09-26 18:40:50 +0200"
     },
     "done": true
   },
@@ -143,9 +167,21 @@
     },
     "done": true
   },
+  "minecraft:recipes/combat/arrow": {
+    "criteria": {
+      "has_flint": "2019-09-26 18:41:32 +0200"
+    },
+    "done": true
+  },
   "minecraft:recipes/building_blocks/spruce_wood": {
     "criteria": {
       "has_log": "2019-08-25 22:00:49 +0200"
+    },
+    "done": true
+  },
+  "minecraft:recipes/building_blocks/coal_block": {
+    "criteria": {
+      "has_coal": "2020-01-11 20:49:21 +0100"
     },
     "done": true
   },
@@ -227,9 +263,27 @@
     },
     "done": true
   },
+  "minecraft:recipes/combat/iron_leggings": {
+    "criteria": {
+      "has_iron_ingot": "2020-01-11 21:06:42 +0100"
+    },
+    "done": true
+  },
+  "minecraft:recipes/tools/iron_axe": {
+    "criteria": {
+      "has_iron_ingot": "2020-01-11 21:06:42 +0100"
+    },
+    "done": true
+  },
   "minecraft:recipes/building_blocks/andesite": {
     "criteria": {
       "has_stone": "2019-09-26 18:41:29 +0200"
+    },
+    "done": true
+  },
+  "minecraft:recipes/combat/shield": {
+    "criteria": {
+      "has_iron_ingot": "2020-01-11 21:06:42 +0100"
     },
     "done": true
   },
@@ -245,15 +299,33 @@
     },
     "done": true
   },
-  "minecraft:recipes/building_blocks/diorite_slab": {
+  "minecraft:recipes/misc/bucket": {
     "criteria": {
-      "has_diorite": "2019-09-26 18:41:29 +0200"
+      "has_iron_ingot": "2020-01-11 21:06:42 +0100"
+    },
+    "done": true
+  },
+  "minecraft:recipes/combat/iron_boots": {
+    "criteria": {
+      "has_iron_ingot": "2020-01-11 21:06:42 +0100"
     },
     "done": true
   },
   "minecraft:recipes/building_blocks/cobblestone_stairs": {
     "criteria": {
       "has_cobblestone": "2019-09-26 18:39:38 +0200"
+    },
+    "done": true
+  },
+  "minecraft:recipes/building_blocks/diorite_slab": {
+    "criteria": {
+      "has_diorite": "2019-09-26 18:41:29 +0200"
+    },
+    "done": true
+  },
+  "minecraft:recipes/redstone/hopper": {
+    "criteria": {
+      "has_iron_ingot": "2020-01-11 21:06:42 +0100"
     },
     "done": true
   },
@@ -287,6 +359,18 @@
     },
     "done": true
   },
+  "minecraft:recipes/combat/iron_chestplate": {
+    "criteria": {
+      "has_iron_ingot": "2020-01-11 21:06:42 +0100"
+    },
+    "done": true
+  },
+  "minecraft:recipes/combat/crossbow": {
+    "criteria": {
+      "has_iron_ingot": "2020-01-11 21:06:42 +0100"
+    },
+    "done": true
+  },
   "minecraft:recipes/building_blocks/light_gray_concrete_powder": {
     "criteria": {
       "has_gravel": "2019-09-26 18:41:32 +0200"
@@ -299,15 +383,21 @@
     },
     "done": true
   },
+  "minecraft:recipes/building_blocks/polished_diorite_from_diorite_stonecutting": {
+    "criteria": {
+      "has_diorite": "2019-09-26 18:41:29 +0200"
+    },
+    "done": true
+  },
   "minecraft:recipes/building_blocks/granite_stairs_from_granite_stonecutting": {
     "criteria": {
       "has_granite": "2019-09-26 18:41:53 +0200"
     },
     "done": true
   },
-  "minecraft:recipes/building_blocks/polished_diorite_from_diorite_stonecutting": {
+  "minecraft:recipes/combat/iron_helmet": {
     "criteria": {
-      "has_diorite": "2019-09-26 18:41:29 +0200"
+      "has_iron_ingot": "2020-01-11 21:06:42 +0100"
     },
     "done": true
   },
@@ -341,15 +431,21 @@
     },
     "done": true
   },
-  "minecraft:recipes/decorations/diorite_wall_from_diorite_stonecutting": {
+  "minecraft:recipes/decorations/iron_bars": {
     "criteria": {
-      "has_diorite": "2019-09-26 18:41:29 +0200"
+      "has_iron_ingot": "2020-01-11 21:06:42 +0100"
     },
     "done": true
   },
   "minecraft:recipes/misc/iron_ingot": {
     "criteria": {
       "has_iron_ore": "2019-09-26 18:40:58 +0200"
+    },
+    "done": true
+  },
+  "minecraft:recipes/decorations/diorite_wall_from_diorite_stonecutting": {
+    "criteria": {
+      "has_diorite": "2019-09-26 18:41:29 +0200"
     },
     "done": true
   },
@@ -383,6 +479,12 @@
     },
     "done": true
   },
+  "minecraft:recipes/transportation/minecart": {
+    "criteria": {
+      "has_iron_ingot": "2020-01-11 21:06:42 +0100"
+    },
+    "done": true
+  },
   "minecraft:recipes/decorations/stonecutter": {
     "criteria": {
       "has_stone": "2019-09-26 18:40:50 +0200"
@@ -413,6 +515,12 @@
     },
     "done": false
   },
+  "minecraft:recipes/redstone/iron_door": {
+    "criteria": {
+      "has_iron_ingot": "2020-01-11 21:06:42 +0100"
+    },
+    "done": true
+  },
   "minecraft:recipes/misc/charcoal": {
     "criteria": {
       "has_log": "2019-08-25 22:00:49 +0200"
@@ -428,6 +536,12 @@
   "minecraft:recipes/building_blocks/spruce_planks": {
     "criteria": {
       "has_log": "2019-08-25 22:00:49 +0200"
+    },
+    "done": true
+  },
+  "minecraft:recipes/tools/iron_hoe": {
+    "criteria": {
+      "has_iron_ingot": "2020-01-11 21:06:42 +0100"
     },
     "done": true
   },
@@ -455,15 +569,15 @@
     },
     "done": true
   },
-  "minecraft:recipes/building_blocks/polished_granite_slab_from_granite_stonecutting": {
-    "criteria": {
-      "has_granite": "2019-09-26 18:41:53 +0200"
-    },
-    "done": true
-  },
   "minecraft:recipes/building_blocks/polished_andesite_slab_from_andesite_stonecutting": {
     "criteria": {
       "has_andesite": "2019-09-26 18:40:55 +0200"
+    },
+    "done": true
+  },
+  "minecraft:recipes/building_blocks/polished_granite_slab_from_granite_stonecutting": {
+    "criteria": {
+      "has_granite": "2019-09-26 18:41:53 +0200"
     },
     "done": true
   },
@@ -485,9 +599,27 @@
     },
     "done": true
   },
+  "minecraft:recipes/tools/iron_shovel": {
+    "criteria": {
+      "has_iron_ingot": "2020-01-11 21:06:42 +0100"
+    },
+    "done": true
+  },
   "minecraft:recipes/tools/stone_pickaxe": {
     "criteria": {
       "has_cobblestone": "2019-09-26 18:39:38 +0200"
+    },
+    "done": true
+  },
+  "minecraft:recipes/redstone/iron_trapdoor": {
+    "criteria": {
+      "has_iron_ingot": "2020-01-11 21:06:42 +0100"
+    },
+    "done": true
+  },
+  "minecraft:recipes/decorations/smithing_table": {
+    "criteria": {
+      "has_iron_ingot": "2020-01-11 21:06:42 +0100"
     },
     "done": true
   },
@@ -533,6 +665,12 @@
     },
     "done": true
   },
+  "minecraft:recipes/redstone/heavy_weighted_pressure_plate": {
+    "criteria": {
+      "has_iron_ingot": "2020-01-11 21:06:42 +0100"
+    },
+    "done": true
+  },
   "minecraft:recipes/tools/stone_hoe": {
     "criteria": {
       "has_cobblestone": "2019-09-26 18:39:38 +0200"
@@ -572,6 +710,12 @@
   "minecraft:recipes/decorations/fletching_table": {
     "criteria": {
       "has_flint": "2019-09-26 18:41:32 +0200"
+    },
+    "done": true
+  },
+  "minecraft:recipes/decorations/lantern": {
+    "criteria": {
+      "has_iron_ingot": "2020-01-11 21:06:42 +0100"
     },
     "done": true
   },
@@ -629,6 +773,12 @@
     },
     "done": true
   },
+  "minecraft:story/smelt_iron": {
+    "criteria": {
+      "iron": "2020-01-11 21:06:42 +0100"
+    },
+    "done": true
+  },
   "minecraft:recipes/tools/stone_axe": {
     "criteria": {
       "has_cobblestone": "2019-09-26 18:39:38 +0200"
@@ -647,5 +797,5 @@
     },
     "done": true
   },
-  "DataVersion": 1976
+  "DataVersion": 2230
 }

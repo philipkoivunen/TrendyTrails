@@ -14,6 +14,7 @@ public enum TrailConstants {
         END_ROD,
         FALLING_WATER,
         FALLING_LAVA,
+        FALLING_HONEY,
         FIREWORKS_SPARK,
         FLAME,
         HEART,
@@ -26,7 +27,7 @@ public enum TrailConstants {
         SNEEZE,
         SPELL,
         SPIT,
-        SQUID_INK;
+        SQUID_INK,;
 
     public static TrailConstants fromString(String string) {
         for(TrailConstants state : values()) {

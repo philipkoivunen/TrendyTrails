@@ -24,7 +24,7 @@ public class EventListener implements Listener {
 
     @EventHandler
     void onPlayerMove(PlayerMoveEvent event) throws InvocationTargetException {
-        TrailSummoner currentTrail = this.playerTrailsHolder.getTrail(event.getPlayer());
+        TrailSummoner currentTrail = this.playerTrailsHolder.getTrail(event.getPlayer().getUniqueId());
         if(currentTrail != null) {
             WrapperPlayServerWorldParticles wpswp = new WrapperPlayServerWorldParticles();
             wpswp.setNumberOfParticles(1);

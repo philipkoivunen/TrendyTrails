@@ -1,0 +1,123 @@
+general:
+  plugin-reloaded: '&dMystery Boxes&8➤ &eThe plugin has been reloaded!'
+  error-invalid-command: '&dMystery Boxes&8➤ &cThe entered command is invalid!'
+  error-player-no-permission: '&dMystery Boxes&8➤ &cYou don''t have a permission!'
+  error-sender-must-be-player: '&dMystery Boxes&8➤ &cYou must be a player!'
+  error-player-not-found: '&dMystery Boxes&8➤ &cThe player was not found!'
+  error-player-offline: '&dMystery Boxes&8➤ &cThe player is offline!'
+  error-no-players-online: '&dMystery Boxes&8➤ &cNo players online!'
+  error-no-players-online-besides: '&dMystery Boxes&8➤ &cNo players online besides
+    you!'
+vaults:
+  error-vault-busy: '&dMystery Boxes&8➤ &cOnly one player can use the Mystery Vault
+    at a time!'
+boxes:
+  box-edit-set: '&dMystery Boxes&8➤ &eMystery Boxes have been set!'
+  box-edit-add: '&dMystery Boxes&8➤ &eMystery Boxes have been added!'
+  box-edit-remove: '&dMystery Boxes&8➤ &eMystery Boxes have been removed!'
+  box-edit-all-set: '&dMystery Boxes&8➤ &eMystery Boxes have been set for everyone!'
+  box-edit-all-add: '&dMystery Boxes&8➤ &eMystery Boxes have been added to everyone!'
+  box-edit-all-remove: '&dMystery Boxes&8➤ &eMystery Boxes have been removed from
+    everyone!'
+  error-player-opening: '&dMystery Boxes&8➤ &cThe player is currently opening a Mystery
+    Box!'
+  error-wait-finish-opening: '&dMystery Boxes&8➤ &cWait for this Mystery Box to finish
+    opening first!'
+  error-player-crafting: '&dMystery Boxes&8➤ &cThe player is currently crafting a
+    Mystery Box!'
+  error-wait-finish-crafting: '&dMystery Boxes&8➤ &cWait for this Mystery Box to finish
+    crafting first!'
+  error-player-not-enough-boxes: '&dMystery Boxes&8➤ &cThe player doesn''t have enough
+    Mystery Boxes!'
+  error-sender-not-enough-boxes: '&dMystery Boxes&8➤ &cYou don''t have enough Mystery
+    Boxes!'
+  error-player-no-boxes: '&dMystery Boxes&8➤ &cThe player doesn''t have Mystery Boxes!'
+  error-sender-no-boxes: '&dMystery Boxes&8➤ &cYou don''t have Mystery Boxes!'
+  error-player-cant-open-box: '&dMystery Boxes&8➤ &cThis Mystery Box can''t be opened!'
+  error-sender-cant-open-box: '&dMystery Boxes&8➤ &cYou can''t open this Mystery Box!'
+  error-player-no-permission: '&dMystery Boxes&8➤ &cThe player doesn''t have permission
+    to open this Mystery Box!'
+  error-no-boxes-registered: '&dMystery Boxes&8➤ &cThere are no Mystery Boxes registered!'
+  error-invalid-box-id: '&dMystery Boxes&8➤ &cInvalid Mystery Box ID! Type ''/mb listboxes''
+    for more info.'
+  error-invalid-loot-id: '&dMystery Boxes&8➤ &cInvalid Loot ID! Type ''/mb boxinfo
+    <box ID>'' for more info.'
+craft-boxes:
+  box-crafted: '&dMystery Boxes&8➤ &eYou have crafted &r{BOX_NAME}&e!'
+  error-cant-craft-box: '&dMystery Boxes&8➤ &cYou can''t craft this Mystery Box!'
+  error-not-enough-dust: '&dMystery Boxes&8➤ &cYou don''t have enough Mystery Dust!'
+dust:
+  dust-edit-set: '&dMystery Boxes&8➤ &eMystery Dust has been set!'
+  dust-edit-add: '&dMystery Boxes&8➤ &eMystery Dust has been added!'
+  dust-edit-remove: '&dMystery Boxes&8➤ &eMystery Dust has been removed!'
+  dust-edit-all-set: '&dMystery Boxes&8➤ &eMystery Dust has been set for everyone!'
+  dust-edit-all-add: '&dMystery Boxes&8➤ &aMystery Dust has been added to everyone!'
+  dust-edit-all-remove: '&dMystery Boxes&8➤ &aMystery Dust has been removed from everyone!'
+vault-menu:
+  menu-title: The Mystery Vault
+  vault-manager-name: '&aMystery Vault Manager'
+  vault-manager-lore:
+  - ''
+  - '&7Create, remove, or view all'
+  - '&7Mystery Vaults which have'
+  - '&7been created on this server.'
+  - ''
+  - '&eClick to open!'
+  craft-boxes-name: '&aCraft Boxes'
+  craft-boxes-lore:
+  - ''
+  - '&7Spend Mystery Dust to craft Mystery'
+  - '&7Boxes which can be opened in any'
+  - '&7Mystery Vault located on the server.'
+  - ''
+  - '&7Mystery Dust: &d{DUST_AVAILABLE}'
+  - ''
+  - '&eClick to craft!'
+  statistics-name: '&a{PLAYER}''s Statistics'
+  statistics-lore:
+  - ''
+  - '&7You''ve got &b{BOXES_AVAILABLE} Mystery Boxes &7available'
+  - '&7You''ve opened &b{STATISTIC_BOXES_OPENED} Mystery Boxes'
+  - '&7Your last opening was: &r{LAST_OPENING}'
+  - ''
+  - '&7You''ve got &d{DUST_AVAILABLE} Mystery Dust &7available'
+  - '&7You''ve crafted &d{STATISTIC_BOXES_OPENED} Mystery Boxes'
+  - '&7Your last crafting was: &r{LAST_CRAFTING}'
+  loot-history-name: '&aLoot History'
+  loot-history-lore:
+  - ''
+  - '&7This is a place where you can view'
+  - '&7all your previous loots.'
+  - ''
+  - '&7Your five most recent loots:'
+  - '&7#1 &r{LOOT_1_NAME}'
+  - '&7#2 &r{LOOT_2_NAME}'
+  - '&7#3 &r{LOOT_3_NAME}'
+  - '&7#4 &r{LOOT_4_NAME}'
+  - '&7#5 &r{LOOT_5_NAME}'
+  - ''
+  - '&eClick to view!'
+craft-boxes-menu:
+  menu-title: Craft Boxes
+  craft-box-can-craft-name: '&eCLICK TO CRAFT &8- &r{BOX_NAME}'
+  craft-box-cannot-craft-name: '&cCANNOT CRAFT &8- &r{BOX_NAME}'
+  craft-box-no-permission-name: '&cNO PERMISSION &8- &r{BOX_NAME}'
+  craft-box-no-dust-name: '&cNOT ENOUGH DUST &8- &r{BOX_NAME}'
+  craft-box-lore:
+  - '&7COST: &c{DUST_COST} Mystery Dust'
+  - '&7AVAILABLE: &a{DUST_AVAILABLE} Mystery Dust'
+  - '{BOX_DESCRIPTION}'
+  go-back-name: '&cGo Back'
+  go-back-lore:
+  - '&7Click to go back!'
+loot-history-menu:
+  menu-title: 'Loot History (Page: {PAGE})'
+  previous-page-name: '&aPrevious Page'
+  previous-page-lore:
+  - '&7Click for Page {PREVIOUS_PAGE}!'
+  next-page-name: '&aNext Page'
+  next-page-lore:
+  - '&7Click for Page {NEXT_PAGE}!'
+  go-back-name: '&cGo Back'
+  go-back-lore:
+  - '&7Click to go back!'

@@ -14,6 +14,7 @@ import com.github.philipkoivunen.trendytrails.commandhandlers.TrailHandler;
 import com.github.philipkoivunen.trendytrails.constants.ColorConstants;
 import com.github.philipkoivunen.trendytrails.constants.ConfigConstants;
 import com.github.philipkoivunen.trendytrails.constants.MessageConstants;
+import com.github.philipkoivunen.trendytrails.file.FileApi;
 import com.github.philipkoivunen.trendytrails.helpers.ColorHelper;
 import com.github.philipkoivunen.trendytrails.objects.PlayerTrailsHolder;
 import org.bukkit.Bukkit;
@@ -36,7 +37,7 @@ public class Trails extends JavaPlugin {
     private Configuration configuration;
     private Translations translations;
     private PlayerTrailsHolder playerTrailsHolder;
-    private Listener listener;
+    private FileApi fileApi;
     @Override
     public void onEnable() {
         protocolManager = ProtocolLibrary.getProtocolManager();
@@ -72,6 +73,9 @@ public class Trails extends JavaPlugin {
         messageManager.setTranslation(translation, fallbackTranslation);
 
         playerTrailsHolder = new PlayerTrailsHolder();
+        fileApi = new FileApi(this.getInstance());
+
+        fileApi.fetchUsers();
 
         carbon.setNoPermissionHandler((CommandSender sender, CarbonCommand command) -> {
             MessageManager.sendMessage(sender, MessageConstants.NO_PERMISSION);
@@ -80,7 +84,7 @@ public class Trails extends JavaPlugin {
         Bukkit.getPluginManager().registerEvents(new EventListener(playerTrailsHolder), this);
 
         carbon.addCommand("trail set")
-                .withHandler(new TrailSet(playerTrailsHolder))
+                .withHandler(new TrailSet(playerTrailsHolder, fileApi))
                 .withArgument(
                         new CarbonArgument.Builder("effect")
                                 .setHandler(new TrailHandler())
@@ -92,8 +96,9 @@ public class Trails extends JavaPlugin {
 
         carbon
                 .addCommand("trail clear")
-                .withHandler(new TrailClear(playerTrailsHolder))
-                .requiresPermission("trendytrails.trail.clear");
+                .withHandler(new TrailClear(playerTrailsHolder, fileApi))
+                .requiresPermission("trendytrails.trail.clear")
+                .preventConsoleCommandSender();
 
         carbon
                 .addCommand("trail reload")
@@ -114,15 +119,15 @@ public class Trails extends JavaPlugin {
     public static Trails getInstance() {
         return instance;
     }
-
     public Configuration getConfiguration() {
         return configuration;
     }
-
     public Translations getTranslations() {
         return translations;
     }
     public ProtocolManager getProtocolManager() {
         return protocolManager;
     }
+    public PlayerTrailsHolder getPlayerTrailsHolder() { return playerTrailsHolder; }
+    public FileApi getFileApi() { return fileApi; }
 }

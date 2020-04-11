@@ -1,0 +1,10 @@
+no_permission: §cYou're not allowed to do that
+effect_set_success: §eThe effect was set successfully
+effect_handle_failed: §cSomething went wrong, the effect was not set
+effect_removed_success: §eThe effect was removed
+color_not_found: §eThe color was not found
+default_error: §cSomething went wrong
+missing_argument: §eWrong arguments was used. Use §f/trail set [effect] [color(optional)]
+configuration_reload_failed: §cSomething went wrong during config reload
+configuration_reloaded: §eConfig successfully reloaded
+no_active_trail: §cThere is no active effect

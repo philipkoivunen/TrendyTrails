@@ -4,7 +4,7 @@ author: philip2096
 description: A simple to use cosmetic plugin
 main: com.github.philipkoivunen.trendytrails.Trails
 depend: [ProtocolLib]
-api-version: 1.13
+api-version: 1.15
 commands:
   trail:
     aliases:

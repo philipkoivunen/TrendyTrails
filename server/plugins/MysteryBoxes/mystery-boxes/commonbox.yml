@@ -1,0 +1,194 @@
+box-settings:
+    box-enabled: true
+
+    box-name: "&aCommon Mystery Box"
+    box-description:
+    - ""
+    - "&7Mystery Boxes are magic-enchanted"
+    - "&7chests which store secret items"
+    - "&7inside them. Open them to see what"
+    - "&7secrets lie within them."
+    - ""
+    - "&7You will get one of the following items:"
+    - "&r✧ &6Small Bag of Gold &r(50% chance)"
+    - "&r✧ &2Small Bag of Emeralds &r(50% chance)"
+    - ""
+    - "&7You are guaranteed to get:"
+    - "&r✧ &d50 Mystery Dust &r(100% chance)"
+    - ""
+    - "&7Rarity: &e✬&7✬✬"
+    - "&7Available: &b{BOX_AVAILABLE} Mystery Boxes"
+
+box-icon-settings:
+    icon-name: "{CLICK_INFO} &8- &aCommon Mystery Box"
+    icon-lore:
+    - "{BOX_DESCRIPTION}"
+
+    icon-type: ENDER_CHEST
+    icon-amount: 1
+    icon-data: 0
+    icon-glow: false
+
+    custom-player-head-as-icon: false
+    custom-player-head-value: "value goes here"
+
+    click-info-click-to-open: "&eCLICK TO OPEN"
+    click-info-unavailable: "&cUNAVAILABLE"
+    click-info-no-permission: "&cNO PERMISSION"
+    click-info-not-enough-boxes: "&cNOT ENOUGH BOXES"
+    click-info-no-boxes: "&cNO BOXES"
+    click-info-during-opening: "&cDURING OPENING"
+    click-info-vault-is-busy: "&cVAULT IS BUSY"
+
+box-animation-settings:
+    first-state-box-name: "&aCommon Mystery Box"
+    first-state-box-type: ENDER_CHEST
+    first-state-box-data: 0
+
+    first-state-box-player-head: false
+    first-state-box-player-name: "xeRicker"
+
+    first-state-box-custom-player-head: false
+    first-state-box-custom-player-value: "value goes here"
+
+box-particle-settings:
+    spiral-particles:
+    - "FIREWORKS_SPARK;1;0;0;0;0"
+    explosion-particles:
+    - "LAVA;5;1;0;0;0"
+    - "FLAME;50;0.5;0;0;0"
+    - "SMOKE_NORMAL;50;0.35;0;0;0"
+    box-particles:
+    - "CRIT_MAGIC;2;0;0.25;0.25;0.25"
+
+loot-reveal-effect-settings:
+    box-lightning:
+        enabled: false
+    player-lightning:
+        enabled: false
+    item-confetti:
+        enabled: true
+        confetti-duration: 2
+        stay-duration: 5
+        item-type: NETHER_STAR
+        item-data: 0
+        item-glow: false
+    particle-text-hologram:
+        enabled: true
+        height-offset: 10
+        particle-text: "COMMON"
+        particle-type: END_ROD
+
+box-opening-settings:
+    can-be-open: true
+
+    required-permission: "mysteryboxes.open.commonbox"
+    no-permission-message: "&dMystery Boxes&8➤ &cYou need a proper permission to open this Mystery Box!"
+
+box-crafting-settings:
+    can-be-craft: true
+
+    required-permission: "mysteryboxes.craft.commonbox"
+    no-permission-message: "&dMystery Boxes&8➤ &cYou need a proper permission to craft this Mystery Box!"
+
+    required-dust: 50
+    no-dust-message: "&dMystery Boxes&8➤ &cYou don't have enough Mystery Dust to craft this Mystery Box!"
+
+box-loot-settings:
+    goldbag:
+        loot-settings:
+            loot-name: "&6Small Bag of Gold"
+            loot-chance: 50
+
+        loot-animation-settings:
+            second-state-box-top-name: "&7Common Mystery Box"
+            second-state-box-bottom-name: "&rYour Loot: &6Small Bag of Gold"
+            second-state-box-type: GOLD_BLOCK
+            second-state-box-data: 0
+
+            second-state-box-player-head: false
+            second-state-box-player-name: "Eselyx"
+
+            second-state-box-custom-player-head: false
+            second-state-box-custom-player-value: "value goes here"
+
+        loot-sound-settings:
+            enabled: true
+            sounds:
+            - ENTITY_PLAYER_LEVELUP;1.0;1.0
+            - ENTITY_VILLAGER_YES;1.0;1.0
+
+        loot-firework-settings:
+            enabled: true
+            fireworks:
+            - BALL;false;false;0;YELLOW;PURPLE
+
+        loot-message-settings:
+            enabled: true
+            messages:
+            - "&d-----------------------------------------------------"
+            - "&d| &rYou have opened the Mystery Box"
+            - "&d| &rand found: &6Small Bag of Gold"
+            - "&d-----------------------------------------------------"
+
+        loot-broadcast-settings:
+            enabled: true
+            broadcast-to-player: false
+            broadcasts:
+            - "&dMystery Boxes&8➤ &a{PLAYER} &rhas found &6Small Bag of Gold&r!"
+
+        loot-command-settings:
+            enabled: true
+            execute-as-player: false
+            commands:
+            - "give {PLAYER} minecraft:gold_ingot 10"
+            - "mysteryboxes adddust {PLAYER} 50"
+
+    emeraldbag:
+        loot-settings:
+            loot-name: "&2Small Bag of Emeralds"
+            loot-chance: 50
+
+        loot-animation-settings:
+            second-state-box-top-name: "&7Common Mystery Box"
+            second-state-box-bottom-name: "&rYour Loot: &2Small Bag of Emeralds"
+            second-state-box-type: EMERALD_BLOCK
+            second-state-box-data: 0
+
+            second-state-box-player-head: false
+            second-state-box-player-name: "Eselyx"
+
+            second-state-box-custom-player-head: false
+            second-state-box-custom-player-value: "value goes here"
+
+        loot-sound-settings:
+            enabled: true
+            sounds:
+            - ENTITY_PLAYER_LEVELUP;1.0;1.0
+            - ENTITY_VILLAGER_YES;1.0;1.0
+
+        loot-firework-settings:
+            enabled: true
+            fireworks:
+            - BALL;false;false;0;LIME;PURPLE
+
+        loot-message-settings:
+            enabled: true
+            messages:
+            - "&d-----------------------------------------------------"
+            - "&d| &rYou have opened the Mystery Box"
+            - "&d| &rand found: &2Small Bag of Emeralds"
+            - "&d-----------------------------------------------------"
+
+        loot-broadcast-settings:
+            enabled: true
+            broadcast-to-player: false
+            broadcasts:
+            - "&dMystery Boxes&8➤ &a{PLAYER} &rhas found &2Small Bag of Emeralds&r!"
+
+        loot-command-settings:
+            enabled: true
+            execute-as-player: false
+            commands:
+            - "give {PLAYER} minecraft:emerald 10"
+            - "mysteryboxes adddust {PLAYER} 50"

@@ -1,0 +1,10 @@
+no_permission: §cDu får inte göra detta
+effect_set_success: §eDin effekt är satt
+effect_handle_failed: §cNågot gick fel, effekten sattes inte
+effect_removed_success: §eEffekten är borttagen
+color_not_found: §eFärgen kunde inte hittas
+default_error: §cNågot gick fel
+missing_argument: '§eFel parametrar användes, : §f/trail set [effect] [color(optional)]'
+configuration_reload_failed: §cNågot gick fel vid inladdning av konfigurationen
+configuration_reloaded: §eKonfigurationen är omladdad
+no_active_trail: §cDu har ingen aktiv effekt

@@ -12,6 +12,7 @@ com\github\philipkoivunen\trendytrails\commandhandlers\TrailHandler.class
 com\github\philipkoivunen\trendytrails\helpers\TrailHelper.class
 com\github\philipkoivunen\trendytrails\constants\ColorConstants.class
 com\github\philipkoivunen\trendytrails\TrailSet.class
+com\github\philipkoivunen\trendytrails\file\FileApi.class
 com\github\philipkoivunen\trendytrails\constants\ConfigConstants.class
 com\github\philipkoivunen\trendytrails\packetWrapper\AbstractPacket.class
 com\github\philipkoivunen\trendytrails\Trails.class
