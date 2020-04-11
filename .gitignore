@@ -1,6 +1,6 @@
-/server/plugins/
-/server/
-/logs/
-/cache/
-/.idea/
+/server/plugins/*
+/server/*
+/logs/*
+/cache/*
+/.idea/*
 /target/
