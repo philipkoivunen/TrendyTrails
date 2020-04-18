@@ -11,7 +11,6 @@ public class TrailsReload implements ICommandHandler {
     public void handle(CommandSender commandSender, String[] strings, int typedArgs) {
     try {
         Trails.getInstance().getConfiguration().reload();
-        Trails.getInstance().getFileApi().fetchUsers();
     } catch (Exception e) {
         MessageManager.sendMessage(commandSender, MessageConstants.CONFIGURATION_RELOAD_FAILED);
         return;
