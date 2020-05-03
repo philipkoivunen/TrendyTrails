@@ -1,11 +1,13 @@
-package com.github.philipkoivunen.trendytrails.objects;
+package com.github.philipkoivunen.trendy_trails.objects;
 
-import com.github.philipkoivunen.trendytrails.TrailSummoner;
+import com.github.philipkoivunen.trendy_trails.TrailSummoner;
+import org.bukkit.event.Listener;
+
 import java.util.HashMap;
 import java.util.UUID;
 
 public class PlayerTrailsHolder {
-    private HashMap<UUID, TrailSummoner> playerTrails = new HashMap<>();
+    private final HashMap<UUID, TrailSummoner> playerTrails = new HashMap<>();
 
     public void addTrail(UUID uuid, TrailSummoner trailSummoner) {
         removeTrail(uuid);

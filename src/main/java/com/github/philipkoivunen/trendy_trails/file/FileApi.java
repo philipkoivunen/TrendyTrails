@@ -1,12 +1,9 @@
-package com.github.philipkoivunen.trendytrails.file;
+package com.github.philipkoivunen.trendy_trails.file;
 
-import com.comphenix.protocol.PacketType;
-import com.github.philipkoivunen.trendytrails.TrailSummoner;
-import com.github.philipkoivunen.trendytrails.Trails;
-import com.github.philipkoivunen.trendytrails.constants.TrailConstants;
-import com.github.philipkoivunen.trendytrails.objects.PlayerTrailsHolder;
-import org.bukkit.configuration.ConfigurationSection;
-import org.bukkit.configuration.MemorySection;
+import com.github.philipkoivunen.trendy_trails.TrailSummoner;
+import com.github.philipkoivunen.trendy_trails.TrendyTrailsPlugin;
+import com.github.philipkoivunen.trendy_trails.constants.TrailConstants;
+import com.github.philipkoivunen.trendy_trails.objects.PlayerTrailsHolder;
 import org.bukkit.configuration.file.YamlConfiguration;
 import org.bukkit.entity.Player;
 import org.bukkit.plugin.Plugin;
@@ -15,7 +12,6 @@ import java.io.File;
 import java.io.IOException;
 import java.util.*;
 import java.util.concurrent.CompletableFuture;
-import java.util.function.Consumer;
 import java.util.logging.Level;
 
 public class FileApi {
@@ -24,7 +20,7 @@ public class FileApi {
     private static final String PLAYER_ID_FIELD = "player_id";
     private static final String TRAIL_NAME_FIELD = "trail_name";
     private static final String TRAIL_COLOR_FIELD = "trail_color";
-    private File usersFile;
+    private final File usersFile;
 
     public FileApi(Plugin plugin) {
         usersFile = new File(plugin.getDataFolder(), FILE_NAME);
@@ -37,7 +33,7 @@ public class FileApi {
 
 
 
-            PlayerTrailsHolder playerTrailsHolder = Trails.getInstance().getPlayerTrailsHolder();
+            PlayerTrailsHolder playerTrailsHolder = TrendyTrailsPlugin.getInstance().getPlayerTrailsHolder();
             List<Map<String, Object>> entries = (List<Map<String, Object>>)yaml.getList(USERS_FIELD);
 
             //ConfigurationSection users = yaml.getConfigurationSection("users");
@@ -60,12 +56,12 @@ public class FileApi {
                     currentTrail.setIsActive(true);
                     currentTrail.setUseDust(false);
                 }
-                Trails.getInstance().getPlayerTrailsHolder().addTrail(player, currentTrail);
+                TrendyTrailsPlugin.getInstance().getPlayerTrailsHolder().addTrail(player, currentTrail);
             }
             try{
                 yaml.save(userFile);
             }catch (IOException ex) {
-                Trails.getInstance().getLogger().log(Level.SEVERE, ex.getMessage(), ex);
+                TrendyTrailsPlugin.getInstance().getLogger().log(Level.SEVERE, ex.getMessage(), ex);
                 return false;
             }
             return true;
@@ -94,7 +90,7 @@ public class FileApi {
             try{
                 yaml.save(userFile);
             }catch (IOException ex) {
-                Trails.getInstance().getLogger().log(Level.SEVERE, ex.getMessage(), ex);
+                TrendyTrailsPlugin.getInstance().getLogger().log(Level.SEVERE, ex.getMessage(), ex);
                 return false;
             }
             return true;

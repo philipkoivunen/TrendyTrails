@@ -1,4 +1,4 @@
-package com.github.philipkoivunen.trendytrails.constants;
+package com.github.philipkoivunen.trendy_trails.constants;
 
 public enum  MessageConstants {
     EFFECT_SET_SUCCESS,
@@ -9,6 +9,5 @@ public enum  MessageConstants {
     MISSING_ARGUMENT,
     DEFAULT_ERROR,
     CONFIGURATION_RELOADED,
-    CONFIGURATION_RELOAD_FAILED,
     NO_ACTIVE_TRAIL
 }

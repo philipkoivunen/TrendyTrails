@@ -16,15 +16,7 @@
  * You should have received a copy of the GNU General Public License
  * along with this program.  If not, see <http://www.gnu.org/licenses/>.
  */
-package com.github.philipkoivunen.trendytrails.packetWrapper;
-import java.lang.reflect.InvocationTargetException;
-import java.util.Objects;
-
-import org.bukkit.entity.Player;
-
-import com.comphenix.protocol.PacketType;
-import com.comphenix.protocol.ProtocolLibrary;
-import com.comphenix.protocol.events.PacketContainer;
+package com.github.philipkoivunen.trendy_trails.packetWrapper;
 import java.lang.reflect.InvocationTargetException;
 import java.util.Objects;
 

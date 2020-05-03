@@ -1,4 +1,4 @@
-package com.github.philipkoivunen.trendytrails.constants;
+package com.github.philipkoivunen.trendy_trails.constants;
 
 public enum ColorConstants {
     AQUA,

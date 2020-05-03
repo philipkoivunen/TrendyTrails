@@ -1,6 +1,5 @@
-/server/plugins/*
-/server/*
-/logs/*
-/cache/*
-/.idea/*
-/target/
+.idea
+target
+server/
+!server/.gitkeep
+trendy-trails-*.jar

@@ -1,8 +1,8 @@
-package com.github.philipkoivunen.trendytrails;
+package com.github.philipkoivunen.trendy_trails;
 
 import org.bukkit.Particle;
-import org.bukkit.entity.Player;
 import org.bukkit.event.Listener;
+
 import java.util.UUID;
 
 public class TrailSummoner implements Listener {
