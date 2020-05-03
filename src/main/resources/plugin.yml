@@ -1,14 +1,12 @@
-name: TrendyTrails
+name: trendy-trails
 version: ${project.version}
 author: philip2096
 description: A simple to use cosmetic plugin
-main: com.github.philipkoivunen.trendytrails.Trails
+main: com.github.philipkoivunen.trendy_trails.TrendyTrailsPlugin
 depend: [ProtocolLib]
 api-version: 1.15
 commands:
   trail:
-    aliases:
-      - trail
 permissions:
   trendytrails.trail:
     default: false

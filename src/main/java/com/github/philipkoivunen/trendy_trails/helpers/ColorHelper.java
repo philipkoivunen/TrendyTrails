@@ -1,12 +1,10 @@
-package com.github.philipkoivunen.trendytrails.helpers;
+package com.github.philipkoivunen.trendy_trails.helpers;
 
-import com.github.philipkoivunen.trendytrails.constants.ColorConstants;
+import com.github.philipkoivunen.trendy_trails.constants.ColorConstants;
 
 import java.util.List;
 import java.util.stream.Collectors;
 import java.util.stream.Stream;
-
-import static com.github.philipkoivunen.trendytrails.constants.ColorConstants.*;
 
 public class ColorHelper {
     public static int[] resolveColor(String color) {

@@ -1,8 +1,8 @@
-package com.github.philipkoivunen.trendytrails;
+package com.github.philipkoivunen.trendy_trails;
 
-import com.github.philipkoivunen.trendytrails.helpers.ColorHelper;
-import com.github.philipkoivunen.trendytrails.objects.PlayerTrailsHolder;
-import com.github.philipkoivunen.trendytrails.packetWrapper.WrapperPlayServerWorldParticles;
+import com.github.philipkoivunen.trendy_trails.helpers.ColorHelper;
+import com.github.philipkoivunen.trendy_trails.objects.PlayerTrailsHolder;
+import com.github.philipkoivunen.trendy_trails.packetWrapper.WrapperPlayServerWorldParticles;
 import org.bukkit.Bukkit;
 import org.bukkit.Color;
 import org.bukkit.Location;
@@ -16,7 +16,7 @@ import com.comphenix.protocol.wrappers.WrappedParticle;
 import java.lang.reflect.InvocationTargetException;
 
 public class EventListener implements Listener {
-    private PlayerTrailsHolder playerTrailsHolder;
+    private final PlayerTrailsHolder playerTrailsHolder;
 
     public EventListener(PlayerTrailsHolder playerTrailsHolder) {
         this.playerTrailsHolder = playerTrailsHolder;
@@ -41,7 +41,7 @@ public class EventListener implements Listener {
             wpswp.setY((float) (playerLocation.getY() + .5));
             wpswp.setZ((float) playerLocation.getZ());
             for(Player p : Bukkit.getOnlinePlayers()) {
-                Trails.getInstance().getProtocolManager().sendServerPacket(p, wpswp.getHandle());
+                TrendyTrailsPlugin.getInstance().getProtocolManager().sendServerPacket(p, wpswp.getHandle());
             }
         }
     }

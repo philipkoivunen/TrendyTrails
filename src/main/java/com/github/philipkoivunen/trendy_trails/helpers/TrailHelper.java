@@ -1,7 +1,6 @@
-package com.github.philipkoivunen.trendytrails.helpers;
+package com.github.philipkoivunen.trendy_trails.helpers;
 
-import com.github.philipkoivunen.trendytrails.constants.ColorConstants;
-import com.github.philipkoivunen.trendytrails.constants.TrailConstants;
+import com.github.philipkoivunen.trendy_trails.constants.TrailConstants;
 
 import java.util.List;
 import java.util.stream.Collectors;
