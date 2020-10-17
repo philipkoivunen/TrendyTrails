@@ -27,7 +27,11 @@ public enum TrailConstants {
         SNEEZE,
         SPELL,
         SPIT,
-        SQUID_INK,;
+        SQUID_INK,
+        WHITE_ASH,
+        FALLING_OBSIDIAN_TEAR,
+        WARPED_SPORE,
+        CRIMSON_SPORE;
 
     public static TrailConstants fromString(String string) {
         for(TrailConstants state : values()) {

@@ -9,11 +9,9 @@ import com.github.hornta.messenger.MessageManager;
 import com.github.hornta.messenger.MessagesBuilder;
 import com.github.hornta.messenger.Translation;
 import com.github.hornta.messenger.Translations;
-import com.github.hornta.versioned_config.Configuration;
-import com.github.hornta.versioned_config.ConfigurationBuilder;
+import com.github.hornta.versioned_config.*;
 import com.github.philipkoivunen.trendy_trails.commandhandlers.ColorHandler;
 import com.github.philipkoivunen.trendy_trails.commandhandlers.TrailHandler;
-import com.github.philipkoivunen.trendy_trails.config.InitialVersion;
 import com.github.philipkoivunen.trendy_trails.constants.ColorConstants;
 import com.github.philipkoivunen.trendy_trails.constants.ConfigConstants;
 import com.github.philipkoivunen.trendy_trails.constants.MessageConstants;
@@ -39,7 +37,13 @@ public class TrendyTrailsPlugin extends JavaPlugin {
     public void onEnable() {
         protocolManager = ProtocolLibrary.getProtocolManager();
         instance = this;
-        setupConfig();
+        try {
+            setupConfig();
+        } catch (ConfigurationException e) {
+            getLogger().severe("Failed to setup configuration: " + e.getMessage());
+            setEnabled(false);
+            return;
+        }
         setupMessages();
         playerTrailsHolder = new PlayerTrailsHolder();
         Bukkit.getPluginManager().registerEvents(new EventListener(playerTrailsHolder), this);
@@ -58,11 +62,15 @@ public class TrendyTrailsPlugin extends JavaPlugin {
         return  commando.handleCommand(sender, command, args);
     }
 
-    private void setupConfig() {
+    private void setupConfig() throws ConfigurationException {
         File cfgFile = new File(getDataFolder(), "config.yml");
-        ConfigurationBuilder<ConfigConstants> cb = new ConfigurationBuilder<>(this, cfgFile);
-        cb.addVersion(new InitialVersion());
-        configuration = cb.run();
+        ConfigurationBuilder<ConfigConstants> cb = new ConfigurationBuilder<>(cfgFile);
+        cb.addMigration(new Migration(1, () -> {
+            Patch<ConfigConstants> patch = new Patch<>();
+            patch.set(ConfigConstants.LANGUAGE, "language", "english", Type.STRING);
+            return patch;
+        }));
+        configuration = cb.create();
     }
 
     private void setupMessages() {
@@ -74,7 +82,8 @@ public class TrendyTrailsPlugin extends JavaPlugin {
           .add(MessageConstants.COLOR_NOT_FOUND, "color_not_found")
           .add(MessageConstants.DEFAULT_ERROR, "default_error")
           .add(MessageConstants.MISSING_ARGUMENT, "missing_argument")
-          .add(MessageConstants.CONFIGURATION_RELOADED, "configuration_reloaded")
+          .add(MessageConstants.CONFIGURATION_RELOAD_SUCCESS, "configuration_reload_success")
+          .add(MessageConstants.CONFIGURATION_RELOAD_FAILURE, "configuration_reload_failure")
           .add(MessageConstants.NO_ACTIVE_TRAIL, "no_active_trail")
           .build();
 
